@@ -58,6 +58,10 @@
 		font-family: $mainFont;
 		font-size: 20px;
 
+		@include mMax {
+			font-size: 14px;
+		}
+
 		&::placeholder {
 			color: transparent;
 		}
@@ -66,6 +70,10 @@
 			font-size: 20px;
 			top: -5px;
 			color: $gray-d2;
+
+			@include mMax {
+				font-size: 14px;
+			}
 		}
 
 		&:focus {

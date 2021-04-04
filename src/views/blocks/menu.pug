@@ -1,11 +1,18 @@
-ul.menu
-	li
-		a(href='#', aria-label='Направления') Направления
-	li
-		a(href='#', aria-label='Услуги') Услуги
-	li
-		a(href='#', aria-label='Портфолио') Портфолио
-	li
-		a(href='#', aria-label='Наши клиенты') Наши клиенты
-	li
-		a(href='#', aria-label='Контакты') Контакты
+.menu
+	.menu__top
+		.menu__back
+			+icon('arrow')(width='22', height='14')
+		a.menu__logo(href='/')
+			img(src='img/logo.png', alt='')
+	ul
+		li
+			a(href='#', aria-label='Направления') Направления
+		li
+			a(href='#', aria-label='Услуги') Услуги
+		li
+			a(href='#', aria-label='Портфолио') Портфолио
+		li
+			a(href='#', aria-label='Наши клиенты') Наши клиенты
+		li
+			a(href='#', aria-label='Контакты') Контакты
+	+button('Связаться со мной', 'button--orange menu__btn', '#')

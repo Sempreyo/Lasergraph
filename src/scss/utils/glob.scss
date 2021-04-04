@@ -32,6 +32,14 @@ section {
 	margin: 0 auto;
 	padding: 0 15px;
 	box-sizing: border-box;
+
+	@include dMax {
+		padding: 0 50px;
+	}
+
+	@include mMax {
+		padding: 0 20px;
+	}
 }
 
 .loaded {
@@ -43,6 +51,10 @@ section {
 	.preloader__img {
 		animation: none;
 	}
+}
+
+.body-scroll-lock {
+	overflow: hidden;
 }
 
 @keyframes preloader-move {

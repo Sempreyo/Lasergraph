@@ -1,6 +1,92 @@
 .menu {
-	display: flex;
-	align-items: center;
+	@include tMax {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 20;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		height: 100vh;
+		padding: 79px 38px 100px;
+		background-color: $white;
+		box-sizing: border-box;
+		transform: translateX(-100%);
+		@include transition(transform);
+	}
+
+	@media (max-height: 450px) {
+		padding: 15px 38px;
+	}
+
+	&.open {
+		transform: translateX(0);
+	}
+
+	&__top {
+		width: 100%;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 16.9vh;
+		position: relative;
+
+		@include tMax {
+			display: flex;
+		}
+
+		@media (max-height: 900px) {
+			margin-bottom: 8vh;
+		}
+
+		@media (max-height: 580px) {
+			margin-bottom: 2vh;
+		}
+	}
+
+	&__back {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-self: flex-start;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		position: absolute;
+		top: -9px;
+		left: 0;
+
+		@include mMax {
+			left: -25px;
+		}
+	}
+
+	&__btn {
+		display: none;
+
+		@include tMax {
+			display: block;
+			margin-top: 12vh;
+		}
+
+		@media (max-height: 900px) {
+			margin-top: 5vh;
+		}
+
+		@media (max-height: 580px) {
+			margin-top: 3vh;
+		}
+	}
+
+	ul {
+		display: flex;
+		align-items: center;
+
+		@include tMax {
+			flex-direction: column;
+		}
+	}
 
 	li {
 		padding-bottom: 4px;
@@ -36,6 +122,26 @@
 
 		&:not(:last-child) {
 			margin-right: 11px;
+
+			@include dMax {
+				margin-right: 0;
+			}
+		}
+
+		+ li {
+			margin-top: 0;
+
+			@include tMax {
+				margin-top: 4.7vh;
+			}
+
+			@media (max-width: 1365px) and (max-height: 900px) {
+				margin-top: 2vh;
+			}
+
+			@media (max-width: 1365px) and (max-height: 580px) {
+				margin-top: 1vh;
+			}
 		}
 
 		a {
@@ -44,6 +150,14 @@
 			font-size: 20px;
 			position: relative;
 			@include transition(transform);
+
+			@include dMax {
+				padding: 13px 14px;
+			}
+
+			@media (max-height: 650px) {
+				padding: 8px 20px;
+			}
 
 			&::before {
 				content: attr(aria-label);

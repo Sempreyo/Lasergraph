@@ -5,10 +5,13 @@ section.first-screen
 		.first-screen__title Производство ваших идей
 		.first-screen__subtitle Воплощаем проекты. От дизайна до готовой продукции с доставкой
 		.first-screen__btn-wrapper
-			+button('Связаться со мной', 'button--orange first-screen__btn', '#')
+			+button('Связаться со мной', 'button--orange first-screen__btn anchor', '#feedback')
 		.first-screen__achievement
 			+icon('star')(width='38', height='38')
 			span Уже 100 компаний успели поработать с нами!
-		.first-screen__anchor
-			a(href='#')
+		.first-screen__anchor.first-screen__anchor--bottom
+			a.anchor(href='#directions')
 				+icon('anchor')(width='150', height='150')
+		a.first-screen__mobile-anchor.anchor(href='#directions')
+			span Покрути вниз
+			+icon('anchor-mobile')(width='14', height='20')

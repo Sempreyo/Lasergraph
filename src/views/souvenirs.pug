@@ -1,0 +1,177 @@
+extends templates/default
+
+block vars
+	-
+		const page = {
+		title: 'index.html'
+		};
+
+block main
+	section.first-screen
+		.container.first-screen__container
+			.first-screen__img
+				img(src='img/clock.png', alt='')
+			.first-screen__title.first-screen__title--wide Бизнес сувениры
+			.first-screen__subtitle.first-screen__subtitle--wide Сувенирная продукция может быть не только с вашим фирменным стилем, но и с вашим уникальным дизайном. Благодаря собственному производству мы воплощаем ваши заказы от дизайна до готовой продукции.
+			.first-screen__btn-wrapper
+				+button('Связаться со мной', 'button--orange first-screen__btn anchor', '#feedback')
+			.first-screen__anchor.first-screen__anchor--bottom
+				a.anchor(href='#portfolio')
+					+icon('anchor')(width='150', height='150')
+			a.first-screen__mobile-anchor.anchor(href='#portfolio')
+				span Покрути вниз
+				+icon('anchor-mobile')(width='14', height='20')
+
+	section#portfolio.portfolio
+		.container.portfolio__container
+			+title('Портфолио', 'Но явные признаки победы институционализации представляют собой не что иное, как')
+			+filter([{filter: '.category-1', text: 'Категория №1'},
+				{filter: '.category-2', text: 'Категория №2'},
+				{filter: '.category-3', text: 'Категория №3'},
+				{filter: '.category-4', text: 'Категория №4'}], 'portfolio__filter')
+		.portfolio__masonry
+			.portfolio__masonry-item.category-2
+				img(src='img/portfolio/item-1.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-1.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-3
+				img(src='img/portfolio/item-2.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-2.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-1
+				img(src='img/portfolio/item-3.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-3.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-3
+				img(src='img/portfolio/item-5.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-4.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-2
+				img(src='img/portfolio/item-4.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-5.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-3
+				img(src='img/portfolio/item-6.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-6.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-4
+				img(src='img/portfolio/item-7.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-7.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-3
+				img(src='img/portfolio/item-8.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-8.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-2
+				img(src='img/portfolio/item-9.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-9.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-2
+				img(src='img/portfolio/item-11.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-10.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-1
+				img(src='img/portfolio/item-10.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-11.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+			.portfolio__masonry-item.category-3
+				img(src='img/portfolio/item-12.jpg', alt='')
+				.portfolio__hover
+					.portfolio__caption
+					.portfolio__nav
+						a.portfolio__zoom(href='img/portfolio/item-12.jpg', data-fancybox='gallery')
+							+icon('zoom')
+						+button('Хочу так же', 'button--orange portfolio__btn anchor', '#feedback')
+
+	section.partners
+		.container.partners__container
+			.partners__block
+				+title('С нами работают', 'Но явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию ' +
+				'победы маркетинга над разумом и должны быть заблокированы в рамках своих собственных рациональных ограничений.', 'partners__title')
+				+button('Связаться со мной', 'button--orange partners__btn anchor', '#feedback')
+			.partners__grid
+				.partners__item(style='background-image: url("img/partners/item-1.jpg")')
+				.partners__item(style='background-color: #ffb400')
+				.partners__item(style='background-image: url("img/partners/item-2.jpg")')
+				.partners__item(style='background-color: #ea5c47')
+				.partners__item(style='background-image: url("img/partners/item-3.jpg")')
+				.partners__item(style='background-color: #ffde31')
+				.partners__item(style='background-color: #c6afd5')
+				.partners__item(style='background-image: url("img/partners/item-4.jpg")')
+				.partners__item(style='background-color: #7da8da')
+				.partners__item(style='background-image: url("img/partners/item-5.jpg")')
+				.partners__item(style='background-color: #b9d26a')
+				.partners__item(style='background-image: url("img/partners/item-6.jpg")')
+				.partners__item(style='background-image: url("img/partners/item-7.jpg")')
+				.partners__item(style='background-color: #ffb400')
+				.partners__item(style='background-image: url("img/partners/item-8.jpg")')
+				.partners__item(style='background-color: #ea5c47')
+				.partners__item(style='background-image: url("img/partners/item-9.jpg")')
+				.partners__item(style='background-color: #ffde31')
+				.partners__item(style='background-color: #c6afd5')
+				.partners__item(style='background-image: url("img/partners/item-10.jpg")')
+				.partners__item(style='background-color: #7da8da')
+				.partners__item(style='background-image: url("img/partners/item-11.jpg")')
+				.partners__item(style='background-color: #b9d26a')
+				.partners__item(style='background-image: url("img/partners/item-12.jpg")')
+
+	section#feedback.feedback
+		.container.feedback__container
+			.feedback__row
+				.feedback__left
+					+title('Готовы обсудить проект?', 'Но явные признаки победы институционализации представляют собой не что иное, как ', 'feedback__title')
+					.feedback__address г. Ростов-на-Дону, пер. Островского, 47, оф.48
+					.feedback__email
+						a(href='mailto:laserstudio@bk.ru') laserstudio@bk.ru
+					.feedback__phone
+						a(href='tel:+78622260401') +7 862 226 04 01
+					+socials([{href: "#", icon: "socials--wa"},
+						{href: "#", icon: "socials--vk"},
+						{href: "#", icon: "socials--instagram"},
+						{href: "#", icon: "socials--fb"}])
+				.feedback__right
+					include blocks/form.pug

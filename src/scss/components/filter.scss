@@ -8,6 +8,10 @@
 		position: relative;
 		cursor: pointer;
 
+		@include mMax {
+			margin-bottom: 0;
+		}
+
 		&::after {
 			content: '';
 			display: block;
@@ -18,6 +22,10 @@
 			bottom: 0;
 			left: 0;
 			@include transition(width);
+
+			@include mMax {
+				display: none;
+			}
 		}
 
 		@include hover {
@@ -41,6 +49,10 @@
 			position: relative;
 			@include transition(transform);
 
+			@include mMax {
+				font-size: 14px;
+			}
+
 			&::before {
 				content: attr(aria-label);
 				position: absolute;
@@ -48,11 +60,23 @@
 				left: -100%;
 				transform: translateY(-50%);
 				@include transition(transform);
+
+				@include mMax {
+					display: none;
+				}
 			}
 		}
 
 		&:not(:last-child) {
 			margin-right: 50px;
+
+			@include tMax {
+				margin-right: 30px;
+			}
+
+			@include mMax {
+				margin-right: 0;
+			}
 		}
 	}
 }

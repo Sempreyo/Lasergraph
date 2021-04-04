@@ -1,15 +1,36 @@
 .title {
 	max-width: 525px;
 
+	@include mMax {
+		margin: 0 auto;
+	}
+
 	&__text {
 		font-size: 42px;
 		line-height: 50px;
 		margin-bottom: 20px;
+
+		@include dMax {
+			letter-spacing: -0.8px;
+		}
+
+		@include mMax {
+			font-size: 28px;
+			line-height: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__subtitle {
 		font-size: 20px;
 		line-height: 130%;
 		color: $gray;
+
+		@include mMax {
+			font-size: 14px;
+			line-height: 17px;
+			text-align: center;
+		}
 	}
 }

@@ -2,6 +2,15 @@
 	&__container {
 		padding-top: 70px;
 		padding-bottom: 70px;
+
+		@include dMax {
+			padding-top: 50px;
+			padding-bottom: 40px;
+		}
+
+		@include mMax {
+			padding-bottom: 20px;
+		}
 	}
 
 	&__wrapper {
@@ -9,6 +18,18 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		margin: 62px -10px 25px;
+
+		@include dMax {
+			margin: 52px -10px 25px;
+		}
+
+		@include tMax {
+			margin: 33px -10px 4px;
+		}
+
+		@include mMax {
+			margin: 49px -10px 4px;
+		}
 	}
 
 	&__item {
@@ -16,6 +37,15 @@
 		height: 210px;
 		margin: 0 10px 25px;
 		cursor: pointer;
+
+		@include tMax {
+			width: 112px;
+			height: 112px;
+		}
+
+		@include mMax {
+			margin: 0 10px;
+		}
 
 		svg {
 			width: 100%;
@@ -30,5 +60,22 @@
 		line-height: 218px;
 		text-transform: uppercase;
 		color: $gray-ec;
+
+		@include dMax {
+			font-size: 150px;
+			line-height: 180px;
+		}
+
+		@include tMax {
+			font-size: 80px;
+			line-height: 96px;
+		}
+
+		@include mMax {
+			font-size: 32px;
+			line-height: 38px;
+			text-align: center;
+			margin-top: 20px;
+		}
 	}
 }

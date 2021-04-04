@@ -4,14 +4,44 @@
 	&__container {
 		padding-top: 66px;
 		padding-bottom: 27px;
+
+		@include dMax {
+			padding-top: 38px;
+			padding-bottom: 17px;
+		}
+
+		@include mMax {
+			padding-top: 5px;
+			padding-bottom: 12px;
+		}
 	}
 
 	&__filter {
 		margin-top: 47px;
+
+		@include dMax {
+			margin-top: 37px;
+		}
+
+		@include tMax {
+			margin-top: 16px;
+		}
+
+		@include mMax {
+			margin-top: 3px;
+		}
 	}
 
 	&__masonry {
 		margin: 0 -15px;
+
+		@include tMax {
+			margin: 0 -6px;
+		}
+
+		@include mMax {
+			margin: 0 -2.5px;
+		}
 	}
 
 	&__masonry-item {
@@ -19,6 +49,22 @@
 		padding: 0 15px;
 		margin-bottom: 30px;
 		position: relative;
+
+		@include dMax {
+			margin-bottom: 21px;
+		}
+
+		@include tMax {
+			max-width: calc(33.3333% - 12px);
+			padding: 0 6px;
+			margin-bottom: 8px;
+		}
+
+		@include mMax {
+			max-width: calc(33.3333% - 5px);
+			padding: 0 2.5px;
+			margin-bottom: 2.5px;
+		}
 
 		@include hover {
 			.portfolio__hover {
@@ -44,6 +90,11 @@
 		opacity: 0;
 		pointer-events: none;
 		@include transition(opacity);
+
+		@include tMax {
+			left: 6px;
+			right: 6px;
+		}
 	}
 
 	&__caption {

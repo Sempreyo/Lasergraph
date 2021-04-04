@@ -6,21 +6,48 @@
 
 	&__row {
 		display: flex;
+		flex-wrap: wrap;
 		margin: 0 -50px;
+
+		@include mMax {
+			margin: 0;
+		}
 
 		#{$self}__field {
 			width: calc(50% - 100px);
 			margin: 0 50px 55px;
+
+			@include mMax {
+				width: 100%;
+				margin: 0 0 29px;
+			}
 		}
 	}
 
 	&__field {
 		display: block;
 		margin-bottom: 50px;
+
+		&--textarea {
+			@include mMax {
+				margin-bottom: 30px;
+			}
+		}
 	}
 
 	&__btn {
 		font-family: $mainFont;
 		cursor: pointer;
+
+		@include tMax {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		@include mMax {
+			max-width: 320px;
+			width: 100%;
+		}
 	}
 }

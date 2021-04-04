@@ -3,15 +3,54 @@
 	border: 2px solid $orange;
 	box-sizing: border-box;
 
+	@include dMax {
+		padding-bottom: 28px;
+	}
+
+	@include tMax {
+		padding: 19px 30px 18px 18px;
+	}
+
 	&__title {
 		font-size: 24px;
 		line-height: 29px;
 		margin-bottom: 20px;
+
+		@include dMax {
+			font-size: 20px;
+			line-height: 24px;
+		}
+
+		@include tMax {
+			margin-bottom: 11px;
+		}
+
+		@include mMax {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 9px;
+		}
 	}
 
 	&__text {
 		font-size: 20px;
 		line-height: 24px;
 		color: $gray;
+
+		@include dMax {
+			font-size: 16px;
+			line-height: 19px;
+		}
+
+		@include mMax {
+			font-size: 12px;
+			line-height: 14px;
+		}
+
+		br {
+			@include tMax {
+				display: none;
+			}
+		}
 	}
 }

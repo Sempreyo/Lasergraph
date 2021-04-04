@@ -2,31 +2,80 @@
 	&__container {
 		padding-top: 111px;
 		padding-bottom: 184px;
+
+		@include dMax {
+			padding-top: 26px;
+		}
+
+		@include tMax {
+			padding-top: 29px;
+			padding-bottom: 50px;
+		}
+
+		@include mMax {
+			padding-top: 39px;
+		}
 	}
 
 	&__row {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include tMax {
+			flex-direction: column;
+		}
 	}
 
 	&__right {
 		padding-top: 30px;
 		padding-right: 65px;
+
+		@include dMax {
+			padding-top: 12px;
+			padding-right: 10px;
+		}
+
+		@include tMax {
+			margin-top: 29px;
+		}
 	}
 
 	&__title {
 		max-width: 540px;
 		margin-bottom: 40px;
+
+		@include tMax {
+			text-align: center;
+		}
+
+		@include mMax {
+			margin-bottom: 20px;
+		}
 	}
 
 	&__address {
 		margin-bottom: 8px;
+
+		@include tMax {
+			text-align: center;
+		}
+
+		@include mMax {
+			font-size: 12px;
+			line-height: 14px;
+			margin-bottom: 10px;
+		}
 	}
 
 	&__email a,
 	&__phone a {
 		@include transition(color);
+
+		@include mMax {
+			font-size: 12px;
+			line-height: 14px;
+		}
 
 		@include hover {
 			color: $orange;
@@ -35,9 +84,21 @@
 
 	&__email {
 		margin-bottom: 8px;
+
+		@include tMax {
+			text-align: center;
+		}
 	}
 
 	&__phone {
 		margin-bottom: 39px;
+
+		@include tMax {
+			text-align: center;
+		}
+
+		@include mMax {
+			margin-bottom: 28px;
+		}
 	}
 }
