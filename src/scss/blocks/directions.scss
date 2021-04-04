@@ -1,0 +1,34 @@
+.directions {
+	&__container {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 62px -10px 25px;
+	}
+
+	&__item {
+		width: 210px;
+		height: 210px;
+		margin: 0 10px 25px;
+		cursor: pointer;
+
+		svg {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			@include transition(box-shadow);
+		}
+	}
+
+	&__text {
+		font-size: 182px;
+		line-height: 218px;
+		text-transform: uppercase;
+		color: $gray-ec;
+	}
+}

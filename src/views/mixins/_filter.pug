@@ -1,0 +1,5 @@
+mixin filter(arr, className)
+	.filter(class=className)
+		each item in arr
+			.filter__item(data-filter=item.filter)
+				span(aria-label=item.text)= item.text

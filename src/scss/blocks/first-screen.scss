@@ -1,0 +1,62 @@
+.first-screen {
+	width: 74%;
+	min-height: 100vh;
+	background-color: $white;
+	transform: translateX(-100%);
+	transition: transform 1s linear;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 100%;
+		height: 100vh;
+		padding: 100px 2.1vw 82px 10.4vw;
+		position: relative;
+	}
+
+	&__img {
+		position: absolute;
+		top: 7%;
+		right: -18%;
+	}
+
+	&__title {
+		max-width: 600px;
+		font-size: 82px;
+		line-height: 90%;
+		margin-bottom: 27px;
+	}
+
+	&__subtitle {
+		max-width: 350px;
+		color: $gray;
+		margin-bottom: 27px;
+	}
+
+	&__btn {
+		width: auto;
+	}
+
+	&__achievement {
+		display: flex;
+		align-items: center;
+		margin: 102px 0 76px;
+
+		svg {
+			fill: $orange;
+			margin-right: 17px;
+		}
+
+		span {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__anchor {
+		a {
+			display: inline-block;
+		}
+	}
+}

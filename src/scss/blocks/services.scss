@@ -1,0 +1,36 @@
+.services {
+	&__container {
+		padding-top: 27px;
+		padding-bottom: 50px;
+	}
+
+	&__btn {
+		margin-top: 30px;
+	}
+
+	&__grid {
+		margin-top: 73px;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 -15px;
+
+		&--col-3 {
+			.services__item {
+				width: calc(33.3333% - 30px);
+			}
+		}
+
+		&--col-2 {
+			.services__item {
+				width: calc(50% - 30px);
+			}
+		}
+	}
+
+	&__item {
+		margin: 0 15px 30px;
+	}
+}

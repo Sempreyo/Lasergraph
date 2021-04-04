@@ -1,0 +1,32 @@
+/* Libs */
+@import 'vendor/fonts.css';
+@import "vendor/jquery.fancybox.min.css";
+@import 'vendor/reset.css';
+@import 'vendor/jquery.fancybox.min.css';
+@import 'vendor/slick.scss';
+
+/* Global */
+@import "utils/vars";
+@import "utils/mixin";
+@import "utils/glob";
+
+/* Components */
+@import "components/button";
+@import "components/field";
+@import "components/title";
+@import "components/filter";
+
+/* Blocks */
+@import "blocks/preloader";
+@import "blocks/_header";
+@import "blocks/socials";
+@import "blocks/menu";
+@import "blocks/first-screen";
+@import "blocks/directions";
+@import "blocks/services-card";
+@import "blocks/services";
+@import "blocks/reason";
+@import "blocks/partners";
+@import "blocks/portfolio";
+@import "blocks/feedback";
+@import "blocks/form";

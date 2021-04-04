@@ -1,0 +1,15 @@
+.title {
+	max-width: 525px;
+
+	&__text {
+		font-size: 42px;
+		line-height: 50px;
+		margin-bottom: 20px;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		line-height: 130%;
+		color: $gray;
+	}
+}

@@ -1,0 +1,97 @@
+.field {
+	$self: &;
+
+	position: relative;
+	display: block;
+	width: 100%;
+	cursor: text;
+
+	.underline {
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		&::before,
+		&::after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			width: 0;
+			height: 1px;
+			background-color: $green;
+			@include transition(width);
+		}
+
+		&::before {
+			left: 50%;
+		}
+
+		&::after {
+			right: 50%;
+		}
+	}
+
+	&__hint {
+		position: absolute;
+		top: -2.3em;
+		display: block;
+		transition: 0.3s;
+		font-size: 14px;
+		color: $blue;
+
+		.red {
+			display: inline;
+			position: relative;
+			top: -7px;
+			color: #ff0000;
+		}
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		padding-bottom: 14px;
+		border: none;
+		border-bottom: 1px solid $blue;
+		font-family: $mainFont;
+		font-size: 20px;
+
+		&::placeholder {
+			color: transparent;
+		}
+
+		&:placeholder-shown ~ #{$self}__hint {
+			font-size: 20px;
+			top: -5px;
+			color: $gray-d2;
+		}
+
+		&:focus {
+			~ #{$self}__hint {
+				position: absolute;
+				top: -2.3em;
+				display: block;
+				font-size: 14px;
+				color: $green;
+			}
+
+			~ .underline {
+				&::before {
+					width: 50%;
+				}
+
+				&::after {
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	textarea {
+		resize: none;
+		height: 23px;
+		margin-bottom: -1px;
+	}
+}

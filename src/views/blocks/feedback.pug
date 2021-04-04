@@ -1,0 +1,16 @@
+section.feedback
+	.container.feedback__container
+		.feedback__row
+			.feedback__left
+				+title('Готовы обсудить проект?', 'Но явные признаки победы институционализации представляют собой не что иное, как ', 'feedback__title')
+				.feedback__address г. Ростов-на-Дону, пер. Островского, 47, оф.48
+				.feedback__email
+					a(href='mailto:laserstudio@bk.ru') laserstudio@bk.ru
+				.feedback__phone
+					a(href='tel:+78622260401') +7 862 226 04 01
+				+socials([{href: "#", icon: "socials--wa"},
+					{href: "#", icon: "socials--vk"},
+					{href: "#", icon: "socials--instagram"},
+					{href: "#", icon: "socials--fb"}])
+			.feedback__right
+				include form.pug

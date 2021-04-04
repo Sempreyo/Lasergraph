@@ -1,0 +1,56 @@
+body {
+	margin: 0;
+	font-family: $mainFont;
+	font-size: 20px;
+	line-height: 130%;
+	color: $mainColor;
+	background-color: $white;
+}
+
+* {
+	outline: none !important;
+}
+
+a {
+	color: $mainColor;
+	text-decoration: none;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+section {
+	background-color: $white;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: 1560px;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: border-box;
+}
+
+.loaded {
+	.header,
+	.first-screen {
+		transform: translateX(0);
+	}
+
+	.preloader__img {
+		animation: none;
+	}
+}
+
+@keyframes preloader-move {
+	0% {
+		transform: translateX(0) skewY(-10deg);
+	}
+
+	100% {
+		transform: translateX(100%) skewY(-10deg);
+	}
+}

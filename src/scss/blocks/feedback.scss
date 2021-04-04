@@ -1,0 +1,43 @@
+.feedback {
+	&__container {
+		padding-top: 111px;
+		padding-bottom: 184px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__right {
+		padding-top: 30px;
+		padding-right: 65px;
+	}
+
+	&__title {
+		max-width: 540px;
+		margin-bottom: 40px;
+	}
+
+	&__address {
+		margin-bottom: 8px;
+	}
+
+	&__email a,
+	&__phone a {
+		@include transition(color);
+
+		@include hover {
+			color: $orange;
+		}
+	}
+
+	&__email {
+		margin-bottom: 8px;
+	}
+
+	&__phone {
+		margin-bottom: 39px;
+	}
+}

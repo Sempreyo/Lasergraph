@@ -1,0 +1,18 @@
+.header {
+	padding: 119px 0 30px;
+	width: 74%;
+	background-color: $white;
+	transform: translateX(-100%);
+	transition: transform 1s linear;
+
+	&__container {
+		max-width: 100%;
+		padding: 0 2.1vw 0 10.4vw;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

@@ -1,0 +1,16 @@
+extends templates/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+block main
+	include blocks/first-screen.pug
+	include blocks/directions.pug
+	include blocks/services.pug
+	include blocks/reason.pug
+	include blocks/partners.pug
+	include blocks/portfolio.pug
+	include blocks/feedback.pug

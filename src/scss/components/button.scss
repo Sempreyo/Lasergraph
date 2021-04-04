@@ -1,0 +1,72 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 18px 14px;
+	font-size: 20px;
+	line-height: 24px;
+	color: $white;
+	border: 2px solid;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+	&--orange {
+		color: $mainColor;
+		background-color: $orange;
+		border-color: $orange;
+
+		@include hover {
+			background-color: transparent;
+			color: $orange;
+		}
+	}
+
+	&--red {
+		background-color: $red;
+		border-color: $red;
+
+		@include hover {
+			background-color: transparent;
+			color: $red;
+		}
+	}
+
+	&--purple {
+		background-color: $purple;
+		border-color: $purple;
+
+		@include hover {
+			background-color: transparent;
+			color: $purple;
+		}
+	}
+
+	&--blue {
+		background-color: $blue;
+		border-color: $blue;
+
+		@include hover {
+			background-color: transparent;
+			color: $blue;
+		}
+	}
+
+	&--green {
+		background-color: $green;
+		border-color: $green;
+
+		@include hover {
+			background-color: transparent;
+			color: $green;
+		}
+	}
+
+	&--yellow {
+		background-color: $yellow;
+		border-color: $yellow;
+
+		@include hover {
+			background-color: transparent;
+			color: $yellow;
+		}
+	}
+}
