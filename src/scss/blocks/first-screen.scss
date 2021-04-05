@@ -2,11 +2,14 @@
 	width: 74%;
 	min-height: calc(100vh - 205px);
 	background-color: $white;
-	transform: translateX(-100%);
 	transition: transform 1s linear;
 
+	@media (min-width: 1366px) {
+		transform: translateX(-150%);
+	}
+
 	@include dMax {
-		min-height: calc(100vh - 152px);
+		min-height: calc(100vh - 100px);
 	}
 
 	@include tMax {
@@ -16,7 +19,6 @@
 
 	@include mMax {
 		min-height: calc(100vh - 80px);
-		height: calc(100vh - 80px);
 	}
 
 	&__anim {
@@ -30,12 +32,12 @@
 		flex-direction: column;
 		justify-content: center;
 		max-width: 100%;
-		height: calc(100vh - 205px);
+		min-height: calc(100vh - 205px);
 		padding: 100px 2.1vw 82px 10.4vw;
 		position: relative;
 
 		@include dMax {
-			height: calc(100vh - 152px);
+			min-height: calc(100vh - 152px);
 			justify-content: flex-start;
 			padding: 58px 2.1vw 82px 3.7vw;
 		}
@@ -45,7 +47,7 @@
 		}
 
 		@include mMax {
-			height: calc(100vh - 80px);
+			min-height: calc(100vh - 80px);
 			padding: 11px 20px 20px 20px;
 		}
 	}
@@ -153,8 +155,8 @@
 		@include mMax {
 			max-width: 280px;
 			width: 100%;
-			margin: 0 auto;
-			box-sizing: border-box;
+			margin: 0 auto 10px;
+			box-sizing: b order-box;
 		}
 	}
 
@@ -167,7 +169,7 @@
 			margin: 57px 0 37px;
 		}
 
-		@include tMax {
+		@media (max-width: 1365px) and (min-height: 900px) {
 			margin: 84px 0 103px;
 		}
 
@@ -211,7 +213,7 @@
 		}
 
 		&--bottom {
-			margin-top: auto;
+			margin-top: 30px;
 
 			@include mMax {
 				display: none;

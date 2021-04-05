@@ -15,7 +15,10 @@
 		transform: skewY(-10deg);
 		position: relative;
 		top: -40%;
-		animation: preloader-move 12s linear infinite;
+
+		@media (min-width: 1366px) {
+			animation: preloader-move 12s linear infinite;
+		}
 
 		&::after {
 			content: '';

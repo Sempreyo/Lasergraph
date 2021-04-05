@@ -2,10 +2,13 @@
 	padding: 119px 0 30px;
 	width: 74%;
 	background-color: $white;
-	transform: translateX(-100%);
 	transition: transform 1s linear;
 	position: relative;
 	z-index: 100;
+
+	@media (min-width: 1366px) {
+		transform: translateX(-150%);
+	}
 
 	@include dMax {
 		padding: 66px 0 30px;

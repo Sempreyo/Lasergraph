@@ -93,119 +93,124 @@ $(document).ready(function(){
 	});
 
 	// Animation
-	var first = new TimelineMax();
-	var second = new TimelineMax();
-	var three = new TimelineMax();
-	var bgColor = $('.reason__block').attr('data-color');
-	var bgColor2 = $('.partners__block').attr('data-color');
+	if(window.matchMedia('(min-width: 1366px)').matches){
+		var first = new TimelineMax();
+		var second = new TimelineMax();
+		var bgColor = $('.reason__block').attr('data-color');
+		var bgColor2 = $('.partners__block').attr('data-color');
 
-	first.from($('.first-screen__img'), 0.25, {scaleX: 0}).delay(1);
-	first.from([$('.header__container'), $('.first-screen__anim')], 0.5, {opacity: 0, right: "300px"}).delay(2);
+		first.from($('.first-screen__img'), 0.25, {opacity: 0, scaleX: 0, delay: 1.7});
+		first.from([$('.header__container'), $('.first-screen__anim')], 0.5, {opacity: 0, right: "300px"});
 
-	second.from($('.reason__img'), 1, {width: 0});
-	second.fromTo(".top", 0.25,
-		{
-			width: 0,
-			background: bgColor,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			width: $('.reason__block').innerWidth(),
-			background: bgColor
-		}
-	);
-	second.fromTo(".right", 0.25,
-		{
-			height: 0,
-			background: bgColor,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			height: $('.reason__block').innerHeight(),
-			background: bgColor
-		}
-	);
-	second.fromTo(".bottom", 0.25,
-		{
-			width: 0,
-			background: bgColor,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			width: $('.reason__block').innerWidth(),
-			background: bgColor
-		}
-	);
-	second.fromTo(".left", 0.25,
-		{
-			height: 0,
-			background: bgColor,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			height: $('.reason__block').innerHeight(),
-			background: bgColor
-		}
-	);
-	second.from($('.reason__title'), 0.5, {opacity: 0, right: "300px"}).delay(0.75);
+		second.from($('.reason__img'), 1, {width: 0});
+		second.fromTo(".top", 0.25,
+			{
+				width: 0,
+				background: bgColor,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				width: $('.reason__block').innerWidth(),
+				background: bgColor
+			}
+		).fromTo(".right", 0.25,
+			{
+				height: 0,
+				background: bgColor,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				height: $('.reason__block').innerHeight(),
+				background: bgColor
+			}
+		).fromTo(".bottom", 0.25,
+			{
+				width: 0,
+				background: bgColor,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				width: $('.reason__block').innerWidth(),
+				background: bgColor
+			}
+		).fromTo(".left", 0.25,
+			{
+				height: 0,
+				background: bgColor,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				height: $('.reason__block').innerHeight(),
+				background: bgColor
+			}
+		).from($('.reason__title'), 0.5,
+			{opacity: 0, right: "300px", delay: 0.75}
+		).fromTo(".top-2", 0.25,
+			{
+				width: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				width: $('.partners__block').innerWidth(),
+				background: bgColor2
+			}
+		).fromTo(".right-2", 0.25,
+			{
+				height: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				height: $('.partners__block').innerHeight(),
+				background: bgColor2
+			}
+		).fromTo(".bottom-2", 0.25,
+			{
+				width: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				width: $('.partners__block').innerWidth(),
+				background: bgColor2
+			}
+		).fromTo(".left-2", 0.25,
+			{
+				height: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				height: $('.partners__block').innerHeight(),
+				background: bgColor2
+			}
+		).from($('.partners__anim'), 0.5,
+			{opacity: 0, right: "300px", delay: 0.75}
+		).from($('.partners__item'), 1, {opacity: 0, rotationX:-60, rotationY:60, delay: 1});
 
-	three.fromTo(".top-2", 0.25,
-		{
-			width: 0,
-			background: bgColor2,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			width: $('.partners__block').innerWidth(),
-			background: bgColor2
-		}
-	);
-	three.fromTo(".right-2", 0.25,
-		{
-			height: 0,
-			background: bgColor2,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			height: $('.partners__block').innerHeight(),
-			background: bgColor2
-		}
-	);
-	three.fromTo(".bottom-2", 0.25,
-		{
-			width: 0,
-			background: bgColor2,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			width: $('.partners__block').innerWidth(),
-			background: bgColor2
-		}
-	);
-	three.fromTo(".left-2", 0.25,
-		{
-			height: 0,
-			background: bgColor2,
-			immediateRender: false,
-			autoRound: false
-		},
-		{
-			height: $('.partners__block').innerHeight(),
-			background: bgColor2
-		}
-	);
-	three.from($('.partners__anim'), 0.5, {opacity: 0, right: "300px"}).delay(0.75);
+		var ctrl = new ScrollMagic.Controller();
 
-	three.from($('.partners__item'), 1, {opacity: 0, rotationX:-60, rotationY:60}).delay(1);
+		new ScrollMagic.Scene({
+			triggerElement: ".trigger",
+			offset: 50,
+			duration: 600
+		}).setTween(second).addTo(ctrl);
 
-
+		new ScrollMagic.Scene({
+			triggerElement: ".trigger-2",
+			offset: -300,
+			duration: 600
+		}).setTween(second).addTo(ctrl);
+	}
 
 	// Anchors
 	anchorScroll($('.anchor'));
@@ -244,7 +249,7 @@ $(document).ready(function(){
 	});
 
 	// Set direction hover
-	if(window.matchMedia('(min-width: 768px)').matches){
+	if(window.matchMedia('(min-width: 1366px)').matches){
 		$('.directions__item').hover(
 			function() {
 				$(this).find('svg').css('box-shadow', '0 0 0 6px ' + $(this).attr('data-color'));
