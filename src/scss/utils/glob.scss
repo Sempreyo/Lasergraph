@@ -57,6 +57,15 @@ section {
 	overflow: hidden;
 }
 
+.field-error {
+	position: absolute;
+	bottom: -23px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 14px;
+	color: $red;
+}
+
 @keyframes preloader-move {
 	0% {
 		transform: translateX(0) skewY(-10deg);
@@ -64,5 +73,280 @@ section {
 
 	100% {
 		transform: translateX(100%) skewY(-10deg);
+	}
+}
+
+.blue {
+	.filter__item::after,
+	.portfolio__caption,
+	.portfolio__zoom,
+	.menu li::after {
+		background-color: $blue;
+	}
+
+	.portfolio__hover,
+	.portfolio__zoom {
+		border-color: $blue;
+	}
+
+	.portfolio__zoom {
+		background-color: $blue;
+
+		@include hover {
+			svg {
+				fill: $blue;
+			}
+		}
+
+		svg {
+			fill: $white;
+		}
+	}
+
+	.socials__item a {
+		@include hover {
+			svg {
+				fill: $blue;
+			}
+		}
+	}
+
+	.feedback__email a,
+	.feedback__phone a {
+		@include hover {
+			color: $blue;
+		}
+	}
+
+	.field input,
+	.field textarea {
+		border-bottom-color: $blue;
+	}
+
+	.left-2,
+	.top-2,
+	.right-2,
+	.bottom-2 {
+		background-color: $blue !important;
+	}
+}
+
+.yellow {
+	.filter__item::after,
+	.portfolio__caption,
+	.portfolio__zoom,
+	.menu li::after {
+		background-color: $yellow;
+	}
+
+	.portfolio__hover,
+	.portfolio__zoom {
+		border-color: $yellow;
+	}
+
+	.portfolio__zoom {
+		background-color: $yellow;
+
+		@include hover {
+			svg {
+				fill: $yellow;
+			}
+		}
+
+		svg {
+			fill: $white;
+		}
+	}
+
+	.socials__item a {
+		@include hover {
+			svg {
+				fill: $yellow;
+			}
+		}
+	}
+
+	.feedback__email a,
+	.feedback__phone a {
+		@include hover {
+			color: $yellow;
+		}
+	}
+
+	.field input,
+	.field textarea {
+		border-bottom-color: $yellow;
+	}
+
+	.left-2,
+	.top-2,
+	.right-2,
+	.bottom-2 {
+		background-color: $yellow !important;
+	}
+}
+
+.red {
+	.filter__item::after,
+	.portfolio__caption,
+	.portfolio__zoom,
+	.menu li::after {
+		background-color: $red;
+	}
+
+	.portfolio__hover,
+	.portfolio__zoom {
+		border-color: $red;
+	}
+
+	.portfolio__zoom {
+		background-color: $red;
+
+		@include hover {
+			svg {
+				fill: $red;
+			}
+		}
+
+		svg {
+			fill: $white;
+		}
+	}
+
+	.socials__item a {
+		@include hover {
+			svg {
+				fill: $red;
+			}
+		}
+	}
+
+	.feedback__email a,
+	.feedback__phone a {
+		@include hover {
+			color: $red;
+		}
+	}
+
+	.field input,
+	.field textarea {
+		border-bottom-color: $red;
+	}
+
+	.left-2,
+	.top-2,
+	.right-2,
+	.bottom-2 {
+		background-color: $red !important;
+	}
+}
+
+.purple {
+	.filter__item::after,
+	.portfolio__caption,
+	.portfolio__zoom,
+	.menu li::after {
+		background-color: $purple;
+	}
+
+	.portfolio__hover,
+	.portfolio__zoom {
+		border-color: $purple;
+	}
+
+	.portfolio__zoom {
+		background-color: $purple;
+
+		@include hover {
+			svg {
+				fill: $purple;
+			}
+		}
+
+		svg {
+			fill: $white;
+		}
+	}
+
+	.socials__item a {
+		@include hover {
+			svg {
+				fill: $purple;
+			}
+		}
+	}
+
+	.feedback__email a,
+	.feedback__phone a {
+		@include hover {
+			color: $purple;
+		}
+	}
+
+	.field input,
+	.field textarea {
+		border-bottom-color: $purple;
+	}
+
+	.left-2,
+	.top-2,
+	.right-2,
+	.bottom-2 {
+		background-color: $purple !important;
+	}
+}
+
+.green {
+	.filter__item::after,
+	.portfolio__caption,
+	.portfolio__zoom,
+	.menu li::after {
+		background-color: $green;
+	}
+
+	.portfolio__hover,
+	.portfolio__zoom {
+		border-color: $green;
+	}
+
+	.portfolio__zoom {
+		background-color: $green;
+
+		@include hover {
+			svg {
+				fill: $green;
+			}
+		}
+
+		svg {
+			fill: $white;
+		}
+	}
+
+	.socials__item a {
+		@include hover {
+			svg {
+				fill: $green;
+			}
+		}
+	}
+
+	.feedback__email a,
+	.feedback__phone a {
+		@include hover {
+			color: $green;
+		}
+	}
+
+	.field input,
+	.field textarea {
+		border-bottom-color: $green;
+	}
+
+	.left-2,
+	.top-2,
+	.right-2,
+	.bottom-2 {
+		background-color: $green !important;
 	}
 }

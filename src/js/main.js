@@ -6,6 +6,9 @@
 //= libs/slick.min.js
 //= libs/jquery.mCustomScrollbar.min.js
 //= libs/isotope.pkgd.min.js
+//= libs/ScrollMagic.min.js
+//= libs/TweenMax.min.js
+//= libs/animation.gsap.min.js
 
 /* my scripts */
 

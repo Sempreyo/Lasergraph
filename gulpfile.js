@@ -137,9 +137,14 @@ gulp.task('fonts:build', function () {
 		.pipe(gulp.dest(path.build.fonts))
 });
 
+gulp.task('php', function() {
+	return gulp.src('source/php/**/*.*')
+		.pipe(gulp.dest('build/php/'));
+});
 
 
-gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts:build', 'img:build', 'svgSprite:build'));
+
+gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts:build', 'img:build', 'svgSprite:build', 'php'));
 
 gulp.task('watch', function () {
 	gulp.watch([path.watch.html], gulp.series("html:build"));

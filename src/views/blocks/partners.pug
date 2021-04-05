@@ -1,9 +1,14 @@
-section.partners
+section#partners.partners
 	.container.partners__container
-		.partners__block
-			+title('С нами работают', 'Но явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию ' +
-			'победы маркетинга над разумом и должны быть заблокированы в рамках своих собственных рациональных ограничений.', 'partners__title')
-			+button('Связаться со мной', 'button--orange partners__btn anchor', '#feedback')
+		.partners__block(data-color='#7da8da')
+			span.left-2
+			span.top-2
+			span.right-2
+			span.bottom-2
+			.partners__anim
+				+title('С нами работают', 'Но явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию ' +
+				'победы маркетинга над разумом и должны быть заблокированы в рамках своих собственных рациональных ограничений.', 'partners__title')
+				+button('Связаться со мной', 'button--orange partners__btn anchor', '#feedback')
 		.partners__grid
 			.partners__item(style='background-image: url("img/partners/item-1.jpg")')
 			.partners__item(style='background-color: #ffb400')

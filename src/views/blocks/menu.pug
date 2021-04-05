@@ -6,13 +6,13 @@
 			img(src='img/logo.png', alt='')
 	ul
 		li
-			a(href='#', aria-label='Направления') Направления
+			a.anchor(href='#directions', aria-label='Направления') Направления
 		li
-			a(href='#', aria-label='Услуги') Услуги
+			a.anchor(href='#services', aria-label='Услуги') Услуги
 		li
-			a(href='#', aria-label='Портфолио') Портфолио
+			a.anchor(href='#portfolio', aria-label='Портфолио') Портфолио
 		li
-			a(href='#', aria-label='Наши клиенты') Наши клиенты
+			a.anchor(href='#partners', aria-label='Наши клиенты') Наши клиенты
 		li
-			a(href='#', aria-label='Контакты') Контакты
-	+button('Связаться со мной', 'button--orange menu__btn', '#')
+			a.anchor(href='#feedback', aria-label='Контакты') Контакты
+	+button('Связаться со мной', 'button--orange menu__btn anchor', '#feedback')

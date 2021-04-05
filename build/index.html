@@ -26,12 +26,12 @@
               </div><a class="menu__logo" href="/"><img src="img/logo.png" alt=""></a>
             </div>
             <ul>
-              <li><a href="#" aria-label="Направления">Направления</a></li>
-              <li><a href="#" aria-label="Услуги">Услуги</a></li>
-              <li><a href="#" aria-label="Портфолио">Портфолио</a></li>
-              <li><a href="#" aria-label="Наши клиенты">Наши клиенты</a></li>
-              <li><a href="#" aria-label="Контакты">Контакты</a></li>
-            </ul><a class="button button--orange menu__btn" href="#">Связаться со мной</a>
+              <li><a class="anchor" href="#directions" aria-label="Направления">Направления</a></li>
+              <li><a class="anchor" href="#services" aria-label="Услуги">Услуги</a></li>
+              <li><a class="anchor" href="#portfolio" aria-label="Портфолио">Портфолио</a></li>
+              <li><a class="anchor" href="#partners" aria-label="Наши клиенты">Наши клиенты</a></li>
+              <li><a class="anchor" href="#feedback" aria-label="Контакты">Контакты</a></li>
+            </ul><a class="button button--orange menu__btn anchor" href="#feedback">Связаться со мной</a>
           </div>
         </div>
       </div>
@@ -40,22 +40,24 @@
       <section class="first-screen">
         <div class="container first-screen__container">
           <div class="first-screen__img"><img src="img/clock.png" alt=""></div>
-          <div class="first-screen__title">Производство ваших идей</div>
-          <div class="first-screen__subtitle">Воплощаем проекты. От дизайна до готовой продукции с доставкой</div>
-          <div class="first-screen__btn-wrapper"><a class="button button--orange first-screen__btn anchor" href="#feedback">Связаться со мной</a>
+          <div class="first-screen__anim">
+            <div class="first-screen__title">Производство ваших идей</div>
+            <div class="first-screen__subtitle">Воплощаем проекты. От дизайна до готовой продукции с доставкой</div>
+            <div class="first-screen__btn-wrapper"><a class="button button--orange first-screen__btn anchor" href="#feedback">Связаться со мной</a>
+            </div>
+            <div class="first-screen__achievement">
+              <svg width="38" height="38">
+                <use xlink:href="svg/sprite.svg#star"></use>
+              </svg><span>Уже 100 компаний успели поработать с нами!</span>
+            </div>
+            <div class="first-screen__anchor first-screen__anchor--bottom"><a class="anchor" href="#directions">
+                <svg width="150" height="150">
+                  <use xlink:href="svg/sprite.svg#anchor"></use>
+                </svg></a></div><a class="first-screen__mobile-anchor anchor" href="#directions"><span>Покрути вниз</span>
+              <svg width="14" height="20">
+                <use xlink:href="svg/sprite.svg#anchor-mobile"></use>
+              </svg></a>
           </div>
-          <div class="first-screen__achievement">
-            <svg width="38" height="38">
-              <use xlink:href="svg/sprite.svg#star"></use>
-            </svg><span>Уже 100 компаний успели поработать с нами!</span>
-          </div>
-          <div class="first-screen__anchor first-screen__anchor--bottom"><a class="anchor" href="#directions">
-              <svg width="150" height="150">
-                <use xlink:href="svg/sprite.svg#anchor"></use>
-              </svg></a></div><a class="first-screen__mobile-anchor anchor" href="#directions"><span>Покрути вниз</span>
-            <svg width="14" height="20">
-              <use xlink:href="svg/sprite.svg#anchor-mobile"></use>
-            </svg></a>
         </div>
       </section>
       <section class="directions" id="directions">
@@ -94,7 +96,7 @@
           <div class="directions__text">ВЫБЕРИТЕ НАПРАВЛЕНИЕ</div>
         </div>
       </section>
-      <section class="services">
+      <section class="services" id="services">
         <div class="container services__container">
           <div class="title">
             <h2 class="title__text">Услуги</h2>
@@ -131,7 +133,7 @@
       <section class="reason">
         <div class="container reason__container">
           <div class="reason__img"><img src="img/reason.jpg" alt=""></div>
-          <div class="reason__block">
+          <div class="reason__block" data-color="#b9d26a"><span class="left"></span><span class="top"></span><span class="right"></span><span class="bottom"></span>
             <div class="title reason__title">
               <h2 class="title__text">Почему с нами выгодно?</h2>
               <div class="title__subtitle">Но явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть заблокированы в рамках своих собственных рациональных ограничений. И нет сомнений, что сделанные на базе интернет-аналитики выводы, инициированные исключительно синтетически, в равной степени предоставлены сами себе. В своём стремлении повысить качество жизни, они забывают, что выбранный нами инновационный путь обеспечивает актуальность распределения внутренних резервов и ресурсов. Вот вам яркий пример современных тенденций - начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Следует отметить, что укрепление и развитие внутренней структуры предоставляет широкие возможности для глубокомысленных рассуждений.</div>
@@ -139,13 +141,15 @@
           </div>
         </div>
       </section>
-      <section class="partners">
+      <section class="partners" id="partners">
         <div class="container partners__container">
-          <div class="partners__block">
-            <div class="title partners__title">
-              <h2 class="title__text">С нами работают</h2>
-              <div class="title__subtitle">Но явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть заблокированы в рамках своих собственных рациональных ограничений.</div>
-            </div><a class="button button--orange partners__btn anchor" href="#feedback">Связаться со мной</a>
+          <div class="partners__block" data-color="#7da8da"><span class="left-2"></span><span class="top-2"></span><span class="right-2"></span><span class="bottom-2"></span>
+            <div class="partners__anim">
+              <div class="title partners__title">
+                <h2 class="title__text">С нами работают</h2>
+                <div class="title__subtitle">Но явные признаки победы институционализации представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть заблокированы в рамках своих собственных рациональных ограничений.</div>
+              </div><a class="button button--orange partners__btn anchor" href="#feedback">Связаться со мной</a>
+            </div>
           </div>
           <div class="partners__grid">
             <div class="partners__item" style="background-image: url(&quot;img/partners/item-1.jpg&quot;)"></div>
@@ -175,7 +179,7 @@
           </div>
         </div>
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container portfolio__container">
           <div class="title">
             <h2 class="title__text">Портфолио</h2>
@@ -342,24 +346,24 @@
               </ul>
             </div>
             <div class="feedback__right">
-              <form class="form" action="" method="POST">
+              <form class="form js-form-validate" action="php/mail.php" method="post">
                 <div class="form__row">
                   <label class="form__field field">
                     <input type="text" name="name" placeholder="Как вас зовут?" required><span class="field__hint">Как вас зовут?</span>
                     <div class="underline"></div>
+                    <div class="field-error" style="display: none"></div>
                   </label>
-                  <div class="field-error" style="display: none"></div>
                   <label class="form__field field">
                     <input type="text" name="phone" placeholder="Телефон" required><span class="field__hint">Телефон</span>
                     <div class="underline"></div>
+                    <div class="field-error" style="display: none"></div>
                   </label>
-                  <div class="field-error" style="display: none"></div>
                 </div>
                 <label class="form__field form__field--textarea field">
                   <textarea name="description" placeholder="Описание задачи (Не обязательно)"></textarea><span class="field__hint">Описание задачи (Не обязательно)</span>
                   <div class="underline"></div>
+                  <div class="field-error" style="display: none"></div>
                 </label>
-                <div class="field-error" style="display: none"></div>
                 <button class="button button--orange form__btn" type="submit">Связаться со мной</button>
               </form>
             </div>
@@ -368,7 +372,10 @@
       </section>
       <div class="footer"></div>
     </main>
-    <div class="popup" id="popup-example"></div>
+    <div class="popup-thanks" id="popup-thanks" style="display: none">
+      <div class="popup-thanks__title">Ваша заявка получена!</div>
+      <div class="popup-thanks__text">Наш менеджер свяжется с Вами <br> в ближайшее время.</div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
