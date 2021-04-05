@@ -99,8 +99,8 @@ $(document).ready(function(){
 	var bgColor = $('.reason__block').attr('data-color');
 	var bgColor2 = $('.partners__block').attr('data-color');
 
-	first.from($('.first-screen__img'), 0.25, {scaleX: 0}).delay(2);
-	first.from([$('.header__container'), $('.first-screen__anim')], 0.5, {opacity: 0, right: "300px"}).delay(3);
+	first.from($('.first-screen__img'), 0.25, {scaleX: 0}).delay(1);
+	first.from([$('.header__container'), $('.first-screen__anim')], 0.5, {opacity: 0, right: "300px"}).delay(2);
 
 	second.from($('.reason__img'), 1, {width: 0});
 	second.fromTo(".top", 0.25,

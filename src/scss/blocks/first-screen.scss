@@ -1,9 +1,13 @@
 .first-screen {
 	width: 74%;
-	min-height: 100vh;
+	min-height: calc(100vh - 205px);
 	background-color: $white;
 	transform: translateX(-100%);
 	transition: transform 1s linear;
+
+	@include dMax {
+		min-height: calc(100vh - 152px);
+	}
 
 	@include tMax {
 		width: 100%;
@@ -26,11 +30,12 @@
 		flex-direction: column;
 		justify-content: center;
 		max-width: 100%;
-		height: 100vh;
+		height: calc(100vh - 205px);
 		padding: 100px 2.1vw 82px 10.4vw;
 		position: relative;
 
 		@include dMax {
+			height: calc(100vh - 152px);
 			justify-content: flex-start;
 			padding: 58px 2.1vw 82px 3.7vw;
 		}
