@@ -138,7 +138,7 @@ gulp.task('fonts:build', function () {
 });
 
 gulp.task('php', function() {
-	return gulp.src('source/php/**/*.*')
+	return gulp.src('src/php/**/*.*')
 		.pipe(gulp.dest('build/php/'));
 });
 
