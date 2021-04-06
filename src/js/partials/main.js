@@ -101,8 +101,8 @@ $(document).ready(function(){
 		var bgColor = $('.reason__block').attr('data-color');
 		var bgColor2 = $('.partners__block').attr('data-color');
 
-		first.from($('.first-screen__img'), 0.5, {opacity: 0, scaleX: 0, delay: 1.7, ease: Power1.easeInOut});
-		first.from([$('.header__container'), $('.first-screen__anim')], 1, {opacity: 0, right: "300px"});
+		first.from($('.first-screen__img img'), 0.9, {scaleX: 0, transformOrigin: "50% 0%", delay: 1.4, ease: Power1.easeInOut})
+				.from([$('.header__container'), $('.first-screen__anim')], 1, {opacity: 0, right: "300px"});
 
 		var play = true,
 				play2 = true,
@@ -219,80 +219,7 @@ $(document).ready(function(){
 
 				play2 = false;
 			}
-
-			/*if ((scroll > partnersSection.offset().top - partnersSection.innerHeight()) && playInner == true) {
-				partnersSection.find('.partners__container').css('opacity', '1');
-				innerPages.fromTo(".top-2", 0.25,
-					{
-						width: 0,
-						background: bgColor2,
-						immediateRender: false,
-						autoRound: false
-					},
-					{
-						width: $('.trigger-2 .partners__block').innerWidth(),
-						background: bgColor2
-					}
-				).fromTo(".right-2", 0.25,
-					{
-						height: 0,
-						background: bgColor2,
-						immediateRender: false,
-						autoRound: false
-					},
-					{
-						height: $('.trigger-2 .partners__block').innerHeight(),
-						background: bgColor2
-					}
-				).fromTo(".bottom-2", 0.25,
-					{
-						width: 0,
-						background: bgColor2,
-						immediateRender: false,
-						autoRound: false
-					},
-					{
-						width: $('.trigger-2 .partners__block').innerWidth(),
-						background: bgColor2
-					}
-				).fromTo(".left-2", 0.25,
-					{
-						height: 0,
-						background: bgColor2,
-						immediateRender: false,
-						autoRound: false
-					},
-					{
-						height: $('.trigger-2 .partners__block').innerHeight(),
-						background: bgColor2
-					}
-				).from($('.trigger-2 .partners__anim'), 0.5,
-					{opacity: 0, right: "300px", delay: 0.75}
-				).from($('.trigger-2 .partners__item'), 1, {opacity: 0, rotationX:-60, rotationY:60, delay: 1});
-
-				playInner = false;
-			}*/
 		});
-
-		/*var ctrl = new ScrollMagic.Controller();
-
-		new ScrollMagic.Scene({
-			triggerElement: ".trigger",
-			offset: -200,
-			duration: 500
-		}).setTween(second).addTo(ctrl);
-
-		new ScrollMagic.Scene({
-			triggerElement: ".trigger",
-			offset: 400,
-			duration: 500
-		}).setTween(three).addTo(ctrl);
-
-		new ScrollMagic.Scene({
-			triggerElement: ".trigger-2",
-			offset: -100,
-			duration: 500
-		}).setTween(innerPages).addTo(ctrl);*/
 	}
 
 	// Anchors

@@ -67,13 +67,54 @@ section {
 	color: $red;
 }
 
-@keyframes preloader-move {
+.anchor-rotate {
+	animation: rotate-360 13s linear infinite;
+	transform-origin: 50% 50%;
+
+	@include tMax {
+		animation: none;
+	}
+}
+
+.arm {
+	animation: up-down 1.2s linear infinite;
+
+	@include tMax {
+		animation: none;
+	}
+}
+
+@keyframes rotate-360 {
 	0% {
-		transform: translateX(0) skewY(-10deg);
+		transform: rotate(0);
 	}
 
 	100% {
-		transform: translateX(100%) skewY(-10deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes up-down {
+	0% {
+		transform: translateY(-8px);
+	}
+
+	50% {
+		transform: translateY(8px);
+	}
+
+	100% {
+		transform: translateY(-8px);
+	}
+}
+
+@keyframes preloader-move {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(100%);
 	}
 }
 
