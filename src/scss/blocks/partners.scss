@@ -152,7 +152,7 @@
 		}
 
 		@include mMax {
-			width: 16.6666%;
+			width: calc(16.6666% - 7.5px);
 			height: auto;
 			padding-top: 16%;
 			margin: 0 3.75px 14px;
