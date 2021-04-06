@@ -285,10 +285,19 @@ $(document).ready(function(){
 	function directionSliderInit() {
 		if(window.matchMedia('(max-width: 767px)').matches){
 			$('.directions__wrapper').slick({
-				slidesToShow: 2.2,
-				slidesToScroll: 1,
+				slidesToShow: 3.4,
+				slidesToScroll: 3.4,
 				arrows: false,
-				infinite: false
+				infinite: false,
+				responsive: [
+					{
+						breakpoint: 500,
+						settings: {
+							slidesToShow: 2.4,
+							slidesToScroll: 2.4,
+						}
+					}
+				]
 			});
 		}
 	}
@@ -303,10 +312,19 @@ $(document).ready(function(){
 	function filterSliderInit() {
 		if(window.matchMedia('(max-width: 767px)').matches){
 			$('.filter').slick({
-				slidesToShow: 2.4,
-				slidesToScroll: 1,
+				slidesToShow: 3.4,
+				slidesToScroll: 3.4,
 				arrows: false,
-				infinite: false
+				infinite: false,
+				responsive: [
+					{
+						breakpoint: 500,
+						settings: {
+							slidesToShow: 2.4,
+							slidesToScroll: 1,
+						}
+					}
+				]
 			});
 		}
 	}

@@ -128,6 +128,7 @@
 		}
 
 		@include mMax {
+			justify-content: space-between;
 			max-height: 100%;
 			max-width: calc(100% + 47px);
 			width: calc(100% + 47px);
@@ -151,9 +152,10 @@
 		}
 
 		@include mMax {
-			width: 47px;
-			height: 47px;
-			margin: 0 3.75px 7px;
+			width: 16.6666%;
+			height: auto;
+			padding-top: 16%;
+			margin: 0 3.75px 14px;
 		}
 	}
 
