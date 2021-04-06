@@ -122,7 +122,8 @@ section {
 	.filter__item::after,
 	.portfolio__caption,
 	.portfolio__zoom,
-	.menu li::after {
+	.menu li::after,
+	.title__text--dot::after {
 		background-color: $blue;
 	}
 
@@ -181,7 +182,8 @@ section {
 	.filter__item::after,
 	.portfolio__caption,
 	.portfolio__zoom,
-	.menu li::after {
+	.menu li::after,
+	.title__text--dot::after {
 		background-color: $yellow;
 	}
 
@@ -240,7 +242,8 @@ section {
 	.filter__item::after,
 	.portfolio__caption,
 	.portfolio__zoom,
-	.menu li::after {
+	.menu li::after,
+	.title__text--dot::after {
 		background-color: $red;
 	}
 
@@ -299,7 +302,8 @@ section {
 	.filter__item::after,
 	.portfolio__caption,
 	.portfolio__zoom,
-	.menu li::after {
+	.menu li::after,
+	.title__text--dot::after {
 		background-color: $purple;
 	}
 
@@ -358,7 +362,8 @@ section {
 	.filter__item::after,
 	.portfolio__caption,
 	.portfolio__zoom,
-	.menu li::after {
+	.menu li::after,
+	.title__text--dot::after {
 		background-color: $green;
 	}
 
