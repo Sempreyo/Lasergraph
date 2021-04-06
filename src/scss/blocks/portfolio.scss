@@ -55,13 +55,13 @@
 		}
 
 		@include tMax {
-			max-width: calc(33.3333% - 12px);
+			width: calc(33.3333% - 12px);
 			padding: 0 6px;
 			margin-bottom: 8px;
 		}
 
 		@include mMax {
-			max-width: calc(33.3333% - 5px);
+			width: calc(33.3333% - 5px);
 			padding: 0 2.5px;
 			margin-bottom: 2.5px;
 		}
