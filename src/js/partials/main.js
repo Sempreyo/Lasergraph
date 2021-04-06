@@ -343,7 +343,7 @@ $(document).ready(function(){
 
 			masonry.isotope({ filter: filterValue });
 		});
-	}, 500);
+	}, 700);
 });
 
 $(window).on('load', function () {
