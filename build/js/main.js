@@ -407,7 +407,7 @@ $(document).ready(function(){
 
 			masonry.isotope({ filter: filterValue });
 		});
-	}, 400);
+	}, 500);
 });
 
 $(window).on('load', function () {

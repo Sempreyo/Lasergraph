@@ -342,8 +342,8 @@ $(document).ready(function(){
 			var filterValue = $( this ).attr('data-filter');
 
 			masonry.isotope({ filter: filterValue });
-		});
-	}, 400);
+		});ghby
+	}, 500);
 });
 
 $(window).on('load', function () {
