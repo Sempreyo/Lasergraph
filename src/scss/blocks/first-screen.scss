@@ -2,7 +2,7 @@
 	width: 74%;
 	min-height: calc(100vh - 160px);
 	background-color: $white;
-	transition: transform 1s linear;
+	transition: transform 2s ease-in-out;
 
 	@media (min-width: 1366px) {
 		transform: translateX(-150%);

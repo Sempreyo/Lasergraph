@@ -101,7 +101,7 @@ $(document).ready(function(){
 		var bgColor = $('.reason__block').attr('data-color');
 		var bgColor2 = $('.partners__block').attr('data-color');
 
-		first.from($('.first-screen__img img'), 0.9, {scaleX: 0, transformOrigin: "50% 0%", delay: 1.4, ease: Power1.easeInOut})
+		first.from($('.first-screen__img img'), 0.9, {scaleX: 0, transformOrigin: "50% 0%", delay: 2.4, ease: Power1.easeInOut})
 				.from([$('.header__container'), $('.first-screen__anim')], 1, {opacity: 0, right: "300px"});
 
 		var play = true,
