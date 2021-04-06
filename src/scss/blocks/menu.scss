@@ -126,6 +126,10 @@
 			@include dMax {
 				margin-right: 0;
 			}
+
+			@include xMin {
+				margin-right: vw(11);
+			}
 		}
 
 		+ li {
@@ -157,6 +161,11 @@
 
 			@media (max-height: 650px) {
 				padding: 8px 20px;
+			}
+
+			@include xMin {
+				font-size: vw(20);
+				padding: vw(13) vw(20);
 			}
 
 			&::before {

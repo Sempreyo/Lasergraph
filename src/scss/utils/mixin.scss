@@ -23,6 +23,16 @@
 	}
 }
 
+@mixin xMin {
+	@media (min-width: 1920px) {
+		@content;
+	}
+}
+
+@function vw($px) {
+	@return (($px/1920) * 100)+vw;
+}
+
 /* Hover */
 @mixin hover {
 	@media (min-width: 1024px) {

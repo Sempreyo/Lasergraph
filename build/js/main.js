@@ -160,11 +160,13 @@ $(document).ready(function(){
 	if(window.matchMedia('(min-width: 1366px)').matches){
 		var first = new TimelineMax();
 		var second = new TimelineMax();
+		var three = new TimelineMax();
+		var innerPages = new TimelineMax();
 		var bgColor = $('.reason__block').attr('data-color');
 		var bgColor2 = $('.partners__block').attr('data-color');
 
-		first.from($('.first-screen__img'), 0.25, {opacity: 0, scaleX: 0, delay: 1.7});
-		first.from([$('.header__container'), $('.first-screen__anim')], 0.5, {opacity: 0, right: "300px"});
+		first.from($('.first-screen__img'), 0.5, {opacity: 0, scaleX: 0, delay: 1.7, ease: Power1.easeInOut});
+		first.from([$('.header__container'), $('.first-screen__anim')], 1, {opacity: 0, right: "300px"});
 
 		second.from($('.reason__img'), 1, {width: 0});
 		second.fromTo(".top", 0.25,
@@ -213,7 +215,9 @@ $(document).ready(function(){
 			}
 		).from($('.reason__title'), 0.5,
 			{opacity: 0, right: "300px", delay: 0.75}
-		).fromTo(".top-2", 0.25,
+		);
+
+		three.fromTo(".top-2", 0.25,
 			{
 				width: 0,
 				background: bgColor2,
@@ -221,7 +225,7 @@ $(document).ready(function(){
 				autoRound: false
 			},
 			{
-				width: $('.partners__block').innerWidth(),
+				width: $('.trigger .partners__block').innerWidth(),
 				background: bgColor2
 			}
 		).fromTo(".right-2", 0.25,
@@ -232,7 +236,7 @@ $(document).ready(function(){
 				autoRound: false
 			},
 			{
-				height: $('.partners__block').innerHeight(),
+				height: $('.trigger .partners__block').innerHeight(),
 				background: bgColor2
 			}
 		).fromTo(".bottom-2", 0.25,
@@ -243,7 +247,7 @@ $(document).ready(function(){
 				autoRound: false
 			},
 			{
-				width: $('.partners__block').innerWidth(),
+				width: $('.trigger .partners__block').innerWidth(),
 				background: bgColor2
 			}
 		).fromTo(".left-2", 0.25,
@@ -254,26 +258,80 @@ $(document).ready(function(){
 				autoRound: false
 			},
 			{
-				height: $('.partners__block').innerHeight(),
+				height: $('.trigger .partners__block').innerHeight(),
 				background: bgColor2
 			}
-		).from($('.partners__anim'), 0.5,
+		).from($('.trigger .partners__anim'), 0.5,
 			{opacity: 0, right: "300px", delay: 0.75}
-		).from($('.partners__item'), 1, {opacity: 0, rotationX:-60, rotationY:60, delay: 1});
+		).from($('.trigger .partners__item'), 1, {opacity: 0, rotationX:-60, rotationY:60, delay: 1});
+
+		innerPages.fromTo(".top-2", 0.25,
+			{
+				width: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				width: $('.trigger-2 .partners__block').innerWidth(),
+				background: bgColor2
+			}
+		).fromTo(".right-2", 0.25,
+			{
+				height: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				height: $('.trigger-2 .partners__block').innerHeight(),
+				background: bgColor2
+			}
+		).fromTo(".bottom-2", 0.25,
+			{
+				width: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				width: $('.trigger-2 .partners__block').innerWidth(),
+				background: bgColor2
+			}
+		).fromTo(".left-2", 0.25,
+			{
+				height: 0,
+				background: bgColor2,
+				immediateRender: false,
+				autoRound: false
+			},
+			{
+				height: $('.trigger-2 .partners__block').innerHeight(),
+				background: bgColor2
+			}
+		).from($('.trigger-2 .partners__anim'), 0.5,
+			{opacity: 0, right: "300px", delay: 0.75}
+		).from($('.trigger-2 .partners__item'), 1, {opacity: 0, rotationX:-60, rotationY:60, delay: 1});
 
 		var ctrl = new ScrollMagic.Controller();
 
 		new ScrollMagic.Scene({
 			triggerElement: ".trigger",
-			offset: 50,
-			duration: 600
+			offset: -200,
+			duration: 500
 		}).setTween(second).addTo(ctrl);
 
 		new ScrollMagic.Scene({
+			triggerElement: ".trigger",
+			offset: 400,
+			duration: 500
+		}).setTween(three).addTo(ctrl);
+
+		new ScrollMagic.Scene({
 			triggerElement: ".trigger-2",
-			offset: -300,
-			duration: 600
-		}).setTween(second).addTo(ctrl);
+			offset: -100,
+			duration: 500
+		}).setTween(innerPages).addTo(ctrl);
 	}
 
 	// Anchors

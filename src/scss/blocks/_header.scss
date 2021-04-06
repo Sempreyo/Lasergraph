@@ -53,14 +53,6 @@
 
 	&__burger {
 		display: none;
-
-		@include tMax {
-			display: block;
-		}
-	}
-
-	&__burger {
-		display: none;
 		align-items: center;
 		width: 20px;
 		height: 14px;
