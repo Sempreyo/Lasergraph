@@ -342,7 +342,7 @@ $(document).ready(function(){
 			var filterValue = $( this ).attr('data-filter');
 
 			masonry.isotope({ filter: filterValue });
-		});ghby
+		});
 	}, 500);
 });
 
