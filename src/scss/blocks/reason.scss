@@ -7,6 +7,10 @@
 		padding-bottom: 125px;
 		overflow: hidden;
 
+		@include dMin {
+			opacity: 0;
+		}
+
 		@include dMax {
 			padding-top: 25px;
 		}

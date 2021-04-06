@@ -128,7 +128,11 @@ section {
 	.top-2,
 	.right-2,
 	.bottom-2 {
-		background-color: $blue !important;
+		background: none transparent;
+
+		@include tMax {
+			background-color: $blue !important;
+		}
 	}
 }
 
@@ -183,7 +187,11 @@ section {
 	.top-2,
 	.right-2,
 	.bottom-2 {
-		background-color: $yellow !important;
+		background: none transparent;
+
+		@include tMax {
+			background-color: $yellow !important;
+		}
 	}
 }
 
@@ -238,7 +246,11 @@ section {
 	.top-2,
 	.right-2,
 	.bottom-2 {
-		background-color: $red !important;
+		background: none transparent;
+
+		@include tMax {
+			background-color: $red !important;
+		}
 	}
 }
 
@@ -293,7 +305,11 @@ section {
 	.top-2,
 	.right-2,
 	.bottom-2 {
-		background-color: $purple !important;
+		background: none transparent;
+
+		@include tMax {
+			background-color: $purple !important;
+		}
 	}
 }
 
@@ -348,6 +364,10 @@ section {
 	.top-2,
 	.right-2,
 	.bottom-2 {
-		background-color: $green !important;
+		background: none transparent;
+
+		@include tMax {
+			background-color: $green !important;
+		}
 	}
 }

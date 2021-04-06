@@ -1,5 +1,5 @@
 .header {
-	padding: 119px 0 30px;
+	padding: 66px 0 30px;
 	width: 74%;
 	background-color: $white;
 	transition: transform 1s linear;
@@ -8,10 +8,6 @@
 
 	@media (min-width: 1366px) {
 		transform: translateX(-150%);
-	}
-
-	@include dMax {
-		padding: 66px 0 30px;
 	}
 
 	@include tMax {

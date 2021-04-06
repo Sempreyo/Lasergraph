@@ -6,6 +6,10 @@
 		padding-bottom: 120px;
 		position: relative;
 
+		@include dMin {
+			opacity: 0;
+		}
+
 		@include dMax {
 			padding-top: 50px;
 		}
@@ -25,7 +29,6 @@
 		width: 47.4%;
 		margin-top: 91px;
 		padding: 48px 50px 47px 48px;
-		//border: 2px solid $blue;
 		box-sizing: border-box;
 		position: relative;
 

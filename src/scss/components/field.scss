@@ -103,6 +103,7 @@
 	textarea {
 		resize: none;
 		height: 24px;
+		overflow-y: hidden;
 		margin-bottom: -1px;
 	}
 }
